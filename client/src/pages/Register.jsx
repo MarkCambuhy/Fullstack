@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Register = () => {
   const [firstname, setFirstname] = useState("");
@@ -8,18 +9,43 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const token = Cookies.get("token");
+  if (token) {
+    window.location.replace("/");
+  }
+  const erroEmail = () => {
+    const err = document.querySelector(".erroemail");
+    err.style.display = "inline";
+  };
+  const verificaSenha = () => {
+    const pass = document.querySelector("#password").value;
+    if (pass.length < 6) {
+      const err = document.querySelector(".errosenha");
+      err.style.display = "inline";
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", {
-        firstname,
-        lastname,
-        email,
-        password,
-      });
-      window.location.replace("/login");
-    } catch (error) {
-      console.log(error);
+    if (verificaSenha()) {
+      try {
+        const res = await axios.post(
+          "http://localhost:5000/api/auth/register",
+          {
+            firstname,
+            lastname,
+            email,
+            password,
+          }
+        );
+
+        window.location.replace("/login");
+      } catch (error) {
+        erroEmail();
+        console.log(error);
+      }
     }
   };
 
@@ -89,6 +115,7 @@ const Register = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+            <span className="erroemail">Email já cadastrado!</span>
           </div>
           <div className="inputs">
             <label htmlFor="password">Password</label>
@@ -99,6 +126,9 @@ const Register = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+            <span className="errosenha">
+              A senha de ter no mínimo 6 digitos.
+            </span>
           </div>
           <button className="submit" type="submit">
             Create account

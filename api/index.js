@@ -4,7 +4,6 @@ var cors = require("cors");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
-const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 
 mongoose
@@ -20,7 +19,6 @@ app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
 
 app.listen(5000, () => {
   console.log("Backend server is running!");

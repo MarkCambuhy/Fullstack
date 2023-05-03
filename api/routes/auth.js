@@ -27,7 +27,7 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    !user && res.status(401).json("Wrong credentials!");
+    !user && res.status(401).json("Credenciais erradas!");
 
     const hashPassword = CryptoJS.AES.decrypt(
       user.password,
@@ -35,7 +35,7 @@ router.post("/login", async (req, res) => {
     );
     const LegitPassword = hashPassword.toString(CryptoJS.enc.Utf8);
     LegitPassword !== req.body.password &&
-      res.status(401).json("Wrong credentials!");
+      res.status(401).json("Credenciais erradas!");
 
     const accessToken = jwt.sign(
       {
@@ -43,8 +43,12 @@ router.post("/login", async (req, res) => {
         isAdmin: user.isAdmin,
       },
       "secretjwt",
-      { expiresIn: "2d" }
+      { expiresIn: "1d" }
     );
+    res.cookie("token", accessToken, {
+      httpOnly: true,
+      maxAge: 60 * 60 * 1000,
+    });
     const { password, ...others } = user._doc;
 
     res.status(200).json({ ...others, accessToken });

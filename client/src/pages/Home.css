@@ -1,0 +1,136 @@
+
+.top-banner {
+    width: 100%;
+    height: 52px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.top-banner a {
+    color: #000;
+}
+
+.header-left svg {
+    width: 120px;
+    height: 24px;
+    /* color: #fff; */
+}
+
+.header-center ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+.header-right {
+    display: flex;
+    gap: 10px;
+}
+.header{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 990;
+    padding: 10px 20px;
+    font-weight: 700;
+
+}
+
+.heroku {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./Model-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    top: 100px;
+    flex-direction: column;
+}
+
+.content-heroku {
+    position: relative;
+    top: 150px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botoes {
+    display: flex;
+    gap: 50px;
+    width: 500px;
+    top: 95%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.order a {
+    background-color: #171a20cc;
+    color: #fff;
+    padding: 15px 24px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.demo a {
+    background-color: #fff;
+    color: #000;
+    padding: 15px 24px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.order, .demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 50px;
+}
+
+.heroku-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account a {
+    color: #000;
+    text-decoration: none;
+}
+
+.pesquisaapi {
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.agentes_info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 60%;
+    background-color: #fff;
+    z-index: 999;
+    border-radius: 5px;
+}

@@ -1,10 +1,16 @@
 import { React, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const erro = () => {
+    const err = document.querySelector(".erro");
+    err.style.display = "inline";
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,14 +19,20 @@ const Login = () => {
         email,
         password,
       });
-      const { accessToken, isAdmin } = res.data;
-      localStorage.setItem("token", accessToken);
-      localStorage.setItem("isAdmin", isAdmin);
+      console.log("first");
+      console.log(res.data);
+      Cookies.set("token", res.data.accessToken);
       window.location.replace("/");
     } catch (error) {
       console.log(error);
+      erro();
     }
   };
+
+  const token = Cookies.get("token");
+  if (token) {
+    window.location.replace("/");
+  }
 
   return (
     <div className="container-signin">
@@ -77,6 +89,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <span className="erro">Email ou senha inválidos!</span>
           <button className="submit" type="submit">
             Sign in
           </button>

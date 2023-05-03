@@ -10,6 +10,7 @@ body {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
+
 .logo {
   width: 120px;
   height: 24px;
@@ -88,4 +89,30 @@ body {
 
 .container-form h1 {
   margin-bottom: 10px;
+}
+
+.erroemail, .errosenha {
+  display: none;
+  width: 100%;
+  background-color: #ffa1a1;
+  color: #fff;
+  height: 40px;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+.erro {
+  display: none;
+  width: 270px;
+  background-color: #ffa1a1;
+  color: #fff;
+  height: 40px;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+.agentes_info {
+  display: none;
 }
