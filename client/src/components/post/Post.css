@@ -1,0 +1,12 @@
+.post {
+    width: 500px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.postTitle {
+    font-size: 28px;
+    font-weight: 700;
+}
