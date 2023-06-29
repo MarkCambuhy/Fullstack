@@ -1,0 +1,18 @@
+.post {
+    width: 500px;
+    height: auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.postTitle {
+    word-wrap: break-word;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.postContent{
+    word-wrap: break-word;
+}
