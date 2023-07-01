@@ -1,0 +1,20 @@
+{"level":"info","message":"User successfully login","timestamp":"2023-07-01T22:21:54.389Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:21:54 +0000] \"POST /auth HTTP/1.1\" 200 390 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:21:54.393Z"}
+{"level":"info","message":"GET post successful","timestamp":"2023-07-01T22:21:56.888Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:21:56 +0000] \"GET /posts HTTP/1.1\" 200 381 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:21:56.893Z"}
+{"level":"info","message":"GET post successful","timestamp":"2023-07-01T22:21:57.055Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:21:57 +0000] \"GET /posts HTTP/1.1\" 200 381 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:21:57.059Z"}
+{"level":"info","message":"Create post successful","timestamp":"2023-07-01T22:23:03.020Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:23:03 +0000] \"POST /posts HTTP/1.1\" 201 152 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:23:03.023Z"}
+{"level":"info","message":"GET post successful","timestamp":"2023-07-01T22:23:03.190Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:23:03 +0000] \"GET /posts HTTP/1.1\" 200 534 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:23:03.193Z"}
+{"level":"info","message":"User successfully registered","timestamp":"2023-07-01T22:41:06.480Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:41:06 +0000] \"POST /signup HTTP/1.1\" 201 274 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:41:06.493Z"}
+{"level":"info","message":"User successfully registered","timestamp":"2023-07-01T22:41:36.280Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:41:36 +0000] \"POST /signup HTTP/1.1\" 201 270 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:41:36.283Z"}
+{"level":"info","message":"User successfully login","timestamp":"2023-07-01T22:41:47.253Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:41:47 +0000] \"POST /auth HTTP/1.1\" 200 388 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:41:47.254Z"}
+{"level":"info","message":"GET post successful","timestamp":"2023-07-01T22:52:10.372Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:52:10 +0000] \"GET /posts HTTP/1.1\" 200 534 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:52:10.376Z"}
+{"level":"info","message":"GET post successful","timestamp":"2023-07-01T22:52:10.541Z"}
+{"level":"info","message":"::1 - - [01/Jul/2023:22:52:10 +0000] \"GET /posts HTTP/1.1\" 200 534 \"http://localhost:3000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\"","timestamp":"2023-07-01T22:52:10.544Z"}

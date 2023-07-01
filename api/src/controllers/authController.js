@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { logger } from "../middlewares/logs.js";
 
 const login = async (req, res) => {
   try {
@@ -27,31 +28,12 @@ const login = async (req, res) => {
       maxAge: 24 * 60 * 60 * 1000,
     });
     const { password, ...others } = user._doc;
+    logger.info(`User successfully login`);
     res.status(200).json({ ...others, accessToken });
   } catch (err) {
+    logger.error(`User failed login`);
     res.status(500).json(`${err}`);
   }
 };
 
-const register = async (req, res) => {
-  const newUser = new User({
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-  });
-  try {
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      const savedUser = await newUser.save();
-      res.status(201).json(savedUser);
-    } else {
-      res.status(401).json("Conflict!");
-    }
-  } catch (err) {
-    res.status(500).json(err);
-  }
-};
-
-export default { login, register };
+export default { login };
