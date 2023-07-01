@@ -1,0 +1,13 @@
+.headerum {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.language{
+    display: flex;
+    align-items: center;
+}

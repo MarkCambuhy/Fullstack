@@ -1,0 +1,59 @@
+.homecontainer{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./Model-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chat {
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.header{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header_center ul, .header_right ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.homecontainer a {
+    color: #000;
+}
+
+.chat{
+    border: 1px solid #000;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+
+.msn{
+    width: 100%;
+    height: 100%;
+    background-color: #cfcfcf;
+}
+
+.msn ul {
+    list-style: none;
+}
+
+.modelthree{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

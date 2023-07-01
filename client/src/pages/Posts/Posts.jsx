@@ -1,12 +1,17 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import api from "../../api/api.js";
 import Postagens from "../../components/posts/Posts.jsx";
+import "./style.css";
+import Header from "../../components/header/Header.jsx";
 
 const Posts = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [posts, setPosts] = useState([]);
   const token = localStorage.getItem("token");
+
+  const limpar = useRef();
+  const limparoutro = useRef();
 
   const fetchPosts = async () => {
     const res = await api.get("/posts", {
@@ -29,15 +34,19 @@ const Posts = () => {
       content,
     });
     fetchPosts();
+    limpar.current.value = "";
+    limparoutro.current.value = "";
   };
 
   return (
-    <div>
+    <div className="postcontainer">
+      <Header />
       <form className="postsForm" onSubmit={(e) => handleSubmit(e)}>
         <h2>Criar posts:</h2>
         <div className="inputs">
           <label htmlFor="title">Title:</label>
           <input
+            ref={limpar}
             type="text"
             name="title"
             id="title"
@@ -48,6 +57,7 @@ const Posts = () => {
         <div className="inputs">
           <label htmlFor="content">Content:</label>
           <input
+            ref={limparoutro}
             type="text"
             name="content"
             id="content"

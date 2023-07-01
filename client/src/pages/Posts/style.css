@@ -1,0 +1,17 @@
+.postsForm{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border: 1px solid #000;
+    padding: 10px;
+    align-self: center;
+    border-radius: 5px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.postcontainer{
+    display: flex;
+    flex-direction: column;
+}

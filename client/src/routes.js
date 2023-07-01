@@ -13,8 +13,8 @@ const Rotas = (props) => {
     <BrowserRouter history={props.history}>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/auth" element={<Login />} />
+        <Route exact path="/signup" element={<Register />} />
         <Route
           exact
           path="/posts"

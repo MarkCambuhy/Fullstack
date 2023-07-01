@@ -1,12 +1,13 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
+import "./style.css";
+import Header from "../../components/header/Header";
 
 const Search = () => {
   const [pesquisa, setPesquisa] = useState("");
 
   const name = document.querySelector("#name");
   const imagem = document.querySelector("#agenteImg");
-  const descricao = document.querySelector("#descricao");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,6 @@ const Search = () => {
       if (info != null) {
         name.innerHTML = info.displayName;
         imagem.src = info.fullPortrait;
-        descricao.innerHTML = info.description;
       }
     } catch (err) {}
   };
@@ -34,8 +34,9 @@ const Search = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
+    <div className="searchcontainer">
+      <Header />
+      <form className="searchform" onSubmit={(e) => handleSubmit(e)}>
         <input
           id="pesquisa"
           name="pesquisa"
@@ -44,10 +45,9 @@ const Search = () => {
         />
         <button type="submit">Pesquisar</button>
       </form>
-      <div>
+      <div className="info">
         <h1 id="name"></h1>
-        <img width={"500px"} id="agenteImg" src="#" alt="agente" />
-        <p id="descricao"></p>
+        <img width={"380px"} id="agenteImg" src="#" alt="agente" />
       </div>
     </div>
   );
